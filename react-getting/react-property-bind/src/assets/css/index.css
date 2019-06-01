@@ -1,0 +1,24 @@
+.red_p {
+  color: red;
+}
+
+p {
+  border: 1px solid #eeeeee;
+  margin: 20px 50px;
+  padding: 5px 5px;
+}
+.news img {
+  width: 150px;
+  height: 125px;
+}
+.box {
+  margin: 20px 50px;
+}
+.box div {
+  display: inline-block;
+  padding-right: 20px;
+}
+
+.title {
+  display: block;
+}
