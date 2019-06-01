@@ -1,5 +1,11 @@
 import React from 'react';
 
+/**
+ * 改变this指向的三种方法：
+ * 第一种方法：<button onClick={this.run.bind(this)}>按钮</button>
+ * 第二种方法：造函数中改变  this.run = this.run.bind(this);
+ * 第三种方法：run=()=> {alert(this.state.name)}
+ */
 class Home extends React.Component {
     constructor(props) {
         super(props);
