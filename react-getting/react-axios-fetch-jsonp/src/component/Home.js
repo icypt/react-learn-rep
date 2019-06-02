@@ -5,6 +5,7 @@ react获取服务器APi接口的数据：
     1、axios          https://github.com/axios/axios       axios的作者觉得jsonp不太友好，推荐用CORS方式更为干净（后端运行跨域）
           1、安装axios模块npm install axios  --save   /  npm install axios  --save
           2、在哪里使用就在哪里引入import axios from 'axios'
+          3、使用axios需要代理api请求地址：在package.json中配置: "proxy": "http://192.168.31.219:8081/"
           3、看文档使用
             var api='http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20';
             axios.get(api)
