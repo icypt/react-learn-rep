@@ -1,0 +1,9 @@
+#================================================== 数据源配置========================================================#
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.31.219:3306/db_order?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123580dG
+  jpa:
+    show-sql: true

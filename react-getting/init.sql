@@ -1,3 +1,5 @@
+#创建数据库
+create database db_order charset utf8;
 ####################################建表语句######################################################
 #创建商品类目表
 drop table if exists product_item;
