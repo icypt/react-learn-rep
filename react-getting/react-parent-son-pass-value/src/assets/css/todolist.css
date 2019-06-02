@@ -1,0 +1,28 @@
+.content {
+    margin: 50px 20% 0px 20%;
+    background: #eeeeee;
+    padding: 20px 20px;
+}
+.list {
+    list-style: none;
+    padding: 5px 0px;
+    margin: 10px 0px;
+    border: 1px solid gray;
+}
+
+.title {
+    display: block;
+}
+
+.list li {
+    width: 500px;
+    padding-top: 10px;
+}
+.remove {
+    margin-left: 20px;
+}
+
+.inputTask {
+    margin-bottom: 10px;
+    display: block;
+}
