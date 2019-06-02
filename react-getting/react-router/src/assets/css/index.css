@@ -1,0 +1,21 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+.header{
+    height: 50px;
+    line-height: 50px;
+    padding-left: 50px;
+    background: #999999;
+}
+.header a {
+    margin-right: 15px;
+    color: #000;
+}
+.header a:hover {
+    color: #ffffff;
+}
+.content {
+    padding-left: 50px;
+    padding-top: 15px;;
+}
