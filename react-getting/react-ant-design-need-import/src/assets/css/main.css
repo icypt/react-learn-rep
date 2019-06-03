@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import '~antd/dist/antd.css';
 .app .trigger {
     font-size: 18px;
     line-height: 64px;
