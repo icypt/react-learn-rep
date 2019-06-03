@@ -1,0 +1,43 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.header {
+    height: 50px;
+    line-height: 50px;
+    background: black;
+}
+
+.header a {
+    padding-left: 15px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.header a:hover {
+    color: darkgreen;
+}
+
+.content {
+    display: flex;
+}
+
+.content .left{
+    width: 20%;
+    height: 1000px;
+    padding-left: 10px;
+    padding-top: 10px;
+    background: #999999;
+}
+
+.content .right{
+    width: 80%;
+    height: 1000px;
+    padding-left: 10px;
+    padding-top: 10px;
+    background: #eeeeee;
+}
+
+.menu li{
+    padding-top: 20px ;
+}
