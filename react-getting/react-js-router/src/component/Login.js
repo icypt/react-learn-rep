@@ -1,5 +1,9 @@
 import React from 'react';
 import { Redirect } from 'react-router'
+
+/**
+ *Redirect文档： https://reacttraining.com/react-router/web/api/Redirect
+ */
 class Login extends React.Component {
     constructor(props) {
         super(props);
