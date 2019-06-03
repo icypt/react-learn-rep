@@ -1,9 +1,15 @@
 import React from 'react';
-import url from 'url'; //cnpm install url --save
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from 'axios';
 
 import '../assets/css/pcontent.css';
+
+/*
+react解析html
+     https://reactjs.org/docs/dom-elements.html
+    <div className="p_content"  dangerouslySetInnerHTML={{__html: this.state.list.content}}> </div>
+    行内样式，中划线全转为驼峰：<p style={{marginBottom:"100px"}} dangerouslySetInnerHTML={{__html: this.state.product.prodDesc}}></p>
+*/
 class ProductContent extends React.Component {
     constructor(props) {
         super(props);
@@ -41,11 +47,11 @@ class ProductContent extends React.Component {
         return (
             <div>
                 <div className="back" >
-                    <Link to="/" style={{"color": "#ffffff","text-decoration":" none"}}>返回</Link>
+                    <Link to="/" >返回</Link>
                 </div>
                 <div className="p_content">
                     <div className="p_info">
-                        <img src={`${this.state.staticurl}${this.state.product.prodImg}`}/>
+                        {this.state.product.prodImg?<img src={`${this.state.staticurl}${this.state.product.prodImg}`} alt=""/> : ''}
                         <h2>{this.state.product.prodName}</h2>
                         <p className="price">{this.state.product.prodPrice}元/份</p>
                     </div>
@@ -54,11 +60,9 @@ class ProductContent extends React.Component {
                             商品详情
                         </h3>
                         <div className="p_content">
-                            <img src={`${this.state.staticurl}${this.state.product.prodImg}`}/>
+                            {this.state.product.prodImg?<img src={`${this.state.staticurl}${this.state.product.prodImg}`} alt=""/> : ''}
                             <br/>
-                            <p style={{"margin-bottom": "100px"}} dangerouslySetInnerHTML={{__html: this.state.product.prodDesc}}>
-
-                            </p>
+                            <p style={{marginBottom:"100px"}} dangerouslySetInnerHTML={{__html: this.state.product.prodDesc}}></p>
                         </div>
                     </div>
                 </div>

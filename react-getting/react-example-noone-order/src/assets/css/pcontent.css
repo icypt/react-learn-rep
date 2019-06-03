@@ -9,6 +9,12 @@
   top: .5rem;
   left: .5rem;
   color: #fff; }
+.back a{
+
+  color: #fff;
+
+  text-decoration: none;
+}
   .back:before {
     content: "";
     display: block;

@@ -1,6 +1,5 @@
 import React from 'react';
-import common from '../model/Common'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
 import '../assets/css/basic.css';
 import '../assets/css/index.css';
 import rexiao from '../assets/image/rexiao.png';
@@ -39,15 +38,15 @@ class Product extends React.Component {
             <div>
                 <header className="index_header">
                     <div className="hlist">
-                        <img src={rexiao}/>
+                        <img src={rexiao} alt=""/>
                         <p>热销榜</p>
                     </div>
                     <div className="hlist">
-                        <img src={caidan}/>
+                        <img src={caidan} alt=""/>
                         <p>点过的菜</p>
                     </div>
                     <div className="hlist">
-                        <img src={sousuo}/>
+                        <img src={sousuo} alt=""/>
                         <p>搜你喜欢</p>
                     </div>
                 </header>
@@ -64,7 +63,7 @@ class Product extends React.Component {
                                                     <li key={productKey}>
                                                         <Link to={`/productContent/${product.id}`}>
                                                             <div className="inner">
-                                                                <img src={`${this.state.staturl}${product.prodImg}`}/>
+                                                                <img src={`${this.state.staturl}${product.prodImg}`} alt=""/>
                                                                 <p className="title">{product.prodName}</p>
                                                                 <p className="price">{product.prodPrice}元</p>
                                                             </div>
