@@ -1,8 +1,12 @@
 package com.icypt.api.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.naming.Name;
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "product_item")
@@ -17,7 +21,11 @@ public class ProductItem  implements Serializable {
     @Column(name = "prod_item_name")
     private String prodItemName;
 
-    public Long getId() {
+    @JsonManagedReference
+    @OneToMany(mappedBy = "productItem")
+    Set<Product> productSet;
+
+  public Long getId() {
         return id;
     }
 
@@ -39,5 +47,13 @@ public class ProductItem  implements Serializable {
 
     public void setProdItemName(String prodItemName) {
         this.prodItemName = prodItemName;
+    }
+
+    public Set<Product> getProductSet() {
+        return productSet;
+    }
+
+    public void setProductSet(Set<Product> productSet) {
+        this.productSet = productSet;
     }
 }

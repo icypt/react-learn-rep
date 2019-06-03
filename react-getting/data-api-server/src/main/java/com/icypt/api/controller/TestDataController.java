@@ -1,6 +1,7 @@
 package com.icypt.api.controller;
 
 import com.icypt.api.common.controller.BaseController;
+import com.icypt.api.service.ProductItemService;
 import com.icypt.api.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -19,6 +20,9 @@ public class TestDataController extends BaseController {
 
     @Autowired
     private ProductService productService;
+
+    @Autowired
+    private ProductItemService productItemService;
 
     /**
      * 获取任务列表
@@ -53,8 +57,22 @@ public class TestDataController extends BaseController {
         return result;
     }
 
+    /**
+     * 根据id获取商品信息
+     * @param pid
+     * @return
+     */
     @RequestMapping(value = "/getProduct/{pid}", produces = MediaType.APPLICATION_JSON_VALUE)
     public Object getProduct(@PathVariable("pid") Long pid) {
-        return productService.getProductById(pid);
+        return success(productService.getProductById(pid));
+    }
+
+    /**
+     * 获取商品类目列表
+     * @return
+     */
+    @RequestMapping(value = "/getProductItemList", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Object getProductItemList() {
+        return success(productItemService.getAllProjectItemsList());
     }
 }

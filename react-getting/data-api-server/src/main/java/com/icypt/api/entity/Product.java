@@ -1,5 +1,8 @@
 package com.icypt.api.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.naming.Name;
 import javax.persistence.*;
 import java.io.Serializable;
@@ -15,6 +18,8 @@ public class Product implements Serializable {
     //产品编号
     @Column(name = "prodNo")
     private String prodNo;
+
+    @JsonBackReference
     //可选属性optional=false,表示author不能为空。删除文章，不影响用户
     @ManyToOne(cascade={CascadeType.MERGE,CascadeType.REFRESH},optional=false)
     //设置在product_item表中的关联字段(外键)
